@@ -17,7 +17,16 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul> -->
-
-<button (click)="translate()">Translate</button>
-<div>{{result}}</div>
-<button (click)="insert()">Insert</button>
+<div>
+    <p>Set the Google API Key:</p>
+    <p>
+        <input type="text" [(ngModel)]="apiKey">
+    </p>
+    <p>
+        <app-button (click)="saveApiKey()" [buttonlabel]="'Save Api Key'"></app-button>
+    </p>
+    <p>
+        <app-button (click)="translate()" [buttonlabel]="'Translate'"></app-button>
+    </p>
+    <div class="ms-font-m">{{result}}</div>
+</div>

@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- <div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul> -->\n\n<button (click)=\"translate()\">Translate</button>\n<div>{{result}}</div>\n<button (click)=\"insert()\">Insert</button>"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- <div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul> -->\n<div>\n    <p>Set the Google API Key:</p>\n    <p>\n        <input type=\"text\" [(ngModel)]=\"apiKey\">\n    </p>\n    <p>\n        <app-button (click)=\"saveApiKey()\" [buttonlabel]=\"'Save Api Key'\"></app-button>\n    </p>\n    <p>\n        <app-button (click)=\"translate()\" [buttonlabel]=\"'Translate'\"></app-button>\n    </p>\n    <div class=\"ms-font-m\">{{result}}</div>\n</div>"
 
 /***/ }),
 
@@ -55,9 +55,10 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var _services_google_translator_google_translator_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/google-translator/google-translator.service */ "./src/app/services/google-translator/google-translator.service.ts");
-/* harmony import */ var _services_word_document_word_document_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/word-document/word-document.service */ "./src/app/services/word-document/word-document.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_settings_storage_settings_storage_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/settings-storage/settings-storage.service */ "./src/app/services/settings-storage/settings-storage.service.ts");
+/* harmony import */ var _services_google_translator_google_translator_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/google-translator/google-translator.service */ "./src/app/services/google-translator/google-translator.service.ts");
+/* harmony import */ var _services_word_document_word_document_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/word-document/word-document.service */ "./src/app/services/word-document/word-document.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -105,13 +106,21 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
 var AppComponent = /** @class */ (function () {
-    function AppComponent(wordDocumentService, googleTranslatorService) {
+    function AppComponent(wordDocumentService, googleTranslatorService, settingsStorageService) {
         this.wordDocumentService = wordDocumentService;
         this.googleTranslatorService = googleTranslatorService;
+        this.settingsStorageService = settingsStorageService;
         this.title = 'TranslatorHelperSource';
         this.result = '';
+        this.apiKey = settingsStorageService.fetch('ApiKey');
     }
+    AppComponent.prototype.saveApiKey = function () {
+        console.log(this.apiKey);
+        this.settingsStorageService.store('ApiKey', this.apiKey);
+        this.googleTranslatorService.apiKey = this.apiKey;
+    };
     AppComponent.prototype.translate = function () {
         return __awaiter(this, void 0, void 0, function () {
             var text, translations, ex_1;
@@ -122,45 +131,37 @@ var AppComponent = /** @class */ (function () {
                         text = _a.sent();
                         _a.label = 2;
                     case 2:
-                        _a.trys.push([2, 4, , 5]);
+                        _a.trys.push([2, 7, , 8]);
                         return [4 /*yield*/, this.googleTranslatorService.translate(text, 'en', 'zh')];
                     case 3:
                         translations = (_a.sent()).data.translations;
-                        if (translations.length > 0) {
-                            this.result = translations[0].translatedText;
-                        }
-                        else {
-                            this.result = '';
-                        }
-                        return [3 /*break*/, 5];
+                        if (!(translations.length > 0)) return [3 /*break*/, 5];
+                        this.result = translations[0].translatedText;
+                        return [4 /*yield*/, this.wordDocumentService.insertText(this.result)];
                     case 4:
+                        _a.sent();
+                        return [3 /*break*/, 6];
+                    case 5:
+                        this.result = 'Error';
+                        _a.label = 6;
+                    case 6: return [3 /*break*/, 8];
+                    case 7:
                         ex_1 = _a.sent();
                         console.log(ex_1);
-                        return [3 /*break*/, 5];
-                    case 5: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    AppComponent.prototype.insert = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.wordDocumentService.insertText(this.result)];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
+                        return [3 /*break*/, 8];
+                    case 8: return [2 /*return*/];
                 }
             });
         });
     };
     AppComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [_services_word_document_word_document_service__WEBPACK_IMPORTED_MODULE_1__["WordDocumentService"], _services_google_translator_google_translator_service__WEBPACK_IMPORTED_MODULE_0__["GoogleTranslatorService"]])
+        __metadata("design:paramtypes", [_services_word_document_word_document_service__WEBPACK_IMPORTED_MODULE_2__["WordDocumentService"], _services_google_translator_google_translator_service__WEBPACK_IMPORTED_MODULE_1__["GoogleTranslatorService"],
+            _services_settings_storage_settings_storage_service__WEBPACK_IMPORTED_MODULE_0__["SettingsStorageService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -181,11 +182,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _services_http_client_http_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./services/http-client/http-client.service */ "./src/app/services/http-client/http-client.service.ts");
-/* harmony import */ var _services_google_translator_google_translator_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./services/google-translator/google-translator.service */ "./src/app/services/google-translator/google-translator.service.ts");
-/* harmony import */ var _services_word_document_word_document_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/word-document/word-document.service */ "./src/app/services/word-document/word-document.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _services_http_client_http_client_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./services/http-client/http-client.service */ "./src/app/services/http-client/http-client.service.ts");
+/* harmony import */ var _services_google_translator_google_translator_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/google-translator/google-translator.service */ "./src/app/services/google-translator/google-translator.service.ts");
+/* harmony import */ var _services_word_document_word_document_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/word-document/word-document.service */ "./src/app/services/word-document/word-document.service.ts");
+/* harmony import */ var _services_settings_storage_settings_storage_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./services/settings-storage/settings-storage.service */ "./src/app/services/settings-storage/settings-storage.service.ts");
+/* harmony import */ var _shared_button_button_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared/button/button.component */ "./src/app/shared/button/button.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -199,24 +203,30 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _shared_button_button_component__WEBPACK_IMPORTED_MODULE_9__["ButtonComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_0__["HttpModule"]
             ],
             providers: [
-                _services_http_client_http_client_service__WEBPACK_IMPORTED_MODULE_4__["HttpClientService"],
-                _services_google_translator_google_translator_service__WEBPACK_IMPORTED_MODULE_5__["GoogleTranslatorService"],
-                _services_word_document_word_document_service__WEBPACK_IMPORTED_MODULE_6__["WordDocumentService"]
+                _services_http_client_http_client_service__WEBPACK_IMPORTED_MODULE_5__["HttpClientService"],
+                _services_settings_storage_settings_storage_service__WEBPACK_IMPORTED_MODULE_8__["SettingsStorageService"],
+                _services_google_translator_google_translator_service__WEBPACK_IMPORTED_MODULE_6__["GoogleTranslatorService"],
+                _services_word_document_word_document_service__WEBPACK_IMPORTED_MODULE_7__["WordDocumentService"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -256,9 +266,10 @@ var GoogleTranslationRequest = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GoogleTranslatorService", function() { return GoogleTranslatorService; });
-/* harmony import */ var _http_client_http_client_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../http-client/http-client.service */ "./src/app/services/http-client/http-client.service.ts");
-/* harmony import */ var _models_googleTranslationRequest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../models/googleTranslationRequest */ "./src/app/models/googleTranslationRequest.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _settings_storage_settings_storage_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../settings-storage/settings-storage.service */ "./src/app/services/settings-storage/settings-storage.service.ts");
+/* harmony import */ var _http_client_http_client_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../http-client/http-client.service */ "./src/app/services/http-client/http-client.service.ts");
+/* harmony import */ var _models_googleTranslationRequest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../models/googleTranslationRequest */ "./src/app/models/googleTranslationRequest.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -306,10 +317,12 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
 var GoogleTranslatorService = /** @class */ (function () {
-    function GoogleTranslatorService(http) {
+    function GoogleTranslatorService(http, settingsStorageService) {
         this.http = http;
-        this.appKey = 'AIzaSyBjASR8phWAHNF3x8GdoSxvuID-ARrNLok';
+        this.settingsStorageService = settingsStorageService;
+        this.apiKey = settingsStorageService.fetch('ApiKey');
     }
     GoogleTranslatorService.prototype.translate = function (text, source, target) {
         if (source === void 0) { source = 'en'; }
@@ -319,13 +332,13 @@ var GoogleTranslatorService = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        request = new _models_googleTranslationRequest__WEBPACK_IMPORTED_MODULE_1__["GoogleTranslationRequest"]();
+                        request = new _models_googleTranslationRequest__WEBPACK_IMPORTED_MODULE_2__["GoogleTranslationRequest"]();
                         request.q = new Array();
                         request.q.push(text);
                         request.source = source;
                         request.target = target;
                         console.log(request);
-                        url = "https://translation.googleapis.com/language/translate/v2?key=" + this.appKey;
+                        url = "https://translation.googleapis.com/language/translate/v2?key=" + this.apiKey;
                         return [4 /*yield*/, this.http.post4Json(url, request)];
                     case 1: return [2 /*return*/, _a.sent()];
                 }
@@ -333,10 +346,10 @@ var GoogleTranslatorService = /** @class */ (function () {
         });
     };
     GoogleTranslatorService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_http_client_http_client_service__WEBPACK_IMPORTED_MODULE_0__["HttpClientService"]])
+        __metadata("design:paramtypes", [_http_client_http_client_service__WEBPACK_IMPORTED_MODULE_1__["HttpClientService"], _settings_storage_settings_storage_service__WEBPACK_IMPORTED_MODULE_0__["SettingsStorageService"]])
     ], GoogleTranslatorService);
     return GoogleTranslatorService;
 }());
@@ -387,6 +400,52 @@ var HttpClientService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
     ], HttpClientService);
     return HttpClientService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/settings-storage/settings-storage.service.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/services/settings-storage/settings-storage.service.ts ***!
+  \***********************************************************************/
+/*! exports provided: SettingsStorageService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsStorageService", function() { return SettingsStorageService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SettingsStorageService = /** @class */ (function () {
+    function SettingsStorageService() {
+    }
+    SettingsStorageService.prototype.store = function (specificKey, value) {
+        window.localStorage.setItem(specificKey, value);
+    };
+    SettingsStorageService.prototype.fetch = function (specificKey) {
+        return window.localStorage.getItem(specificKey);
+    };
+    SettingsStorageService.prototype.remove = function (specificKey) {
+        window.localStorage.removeItem(specificKey);
+    };
+    SettingsStorageService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], SettingsStorageService);
+    return SettingsStorageService;
 }());
 
 
@@ -514,6 +573,73 @@ var WordDocumentService = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], WordDocumentService);
     return WordDocumentService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/button/button.component.css":
+/*!****************************************************!*\
+  !*** ./src/app/shared/button/button.component.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license in root of repo. */\r\n\r\n\r\n/*\r\n  This file provides the styles for the button.\r\n*/\r\n\r\n\r\n.button-spacer {\r\n    margin-top: 30px;\r\n    margin-bottom: 30px;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/shared/button/button.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/shared/button/button.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license in root of repo. -->\n\n<!--\n  This file creates the HTML of the button. \n-->\n<div class=\"button-spacer\">\n    <button class=\"ms-Button ms-Button--primary\" id=\"replace-button\">\n        <span class=\"ms-Button-label\" id=\"button-text\">{{buttonlabel}}</span>\n    </button>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/shared/button/button.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/shared/button/button.component.ts ***!
+  \***************************************************/
+/*! exports provided: ButtonComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ButtonComponent", function() { return ButtonComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ButtonComponent = /** @class */ (function () {
+    function ButtonComponent() {
+    }
+    ButtonComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", String)
+    ], ButtonComponent.prototype, "buttonlabel", void 0);
+    ButtonComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-button',
+            template: __webpack_require__(/*! ./button.component.html */ "./src/app/shared/button/button.component.html"),
+            styles: [__webpack_require__(/*! ./button.component.css */ "./src/app/shared/button/button.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ButtonComponent);
+    return ButtonComponent;
 }());
 
 
