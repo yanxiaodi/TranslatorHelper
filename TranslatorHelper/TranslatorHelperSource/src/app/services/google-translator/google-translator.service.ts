@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 export class GoogleTranslatorService {
 
   constructor(public http: HttpClientService) { }
-  appKey = 'AIzaSyBjASR8phWAHNF3x8GdoSxvuID-ARrNLok';
+  appKey = '';
   async translate(text: string, source: string = 'en', target: string = 'zh') {
     const request = new GoogleTranslationRequest();
     request.q = new Array<string>();
