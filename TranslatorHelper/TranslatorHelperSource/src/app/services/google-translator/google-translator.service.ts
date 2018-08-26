@@ -16,7 +16,8 @@ export class GoogleTranslatorService {
     request.q.push(text);
     request.source = source;
     request.target = target;
-    const url = `$https://translation.googleapis.com/language/translate/v2?key=${this.appKey}`;
-    return await this.http.get4Json<GoogleTranslationResponse>(url);
+    console.log(request);
+    const url = `https://translation.googleapis.com/language/translate/v2?key=${this.appKey}`;
+    return await this.http.post4Json<GoogleTranslationResponse>(url, request);
   }
 }

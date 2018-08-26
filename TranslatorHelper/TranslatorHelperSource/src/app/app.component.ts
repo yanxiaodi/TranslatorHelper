@@ -15,13 +15,16 @@ export class AppComponent {
   }
   async translate() {
     const text = await this.wordDocumentService.getParagraph();
-    const translations = (await this.googleTranslatorService.translate(text, 'en', 'zh')).data.translations;
-    if (translations.length > 0) {
-      this.result = translations[0].translatedText;
-    } else {
-      this.result = '';
+    try {
+      const translations = (await this.googleTranslatorService.translate(text, 'en', 'zh')).data.translations;
+      if (translations.length > 0) {
+        this.result = translations[0].translatedText;
+      } else {
+        this.result = '';
+      }
+    } catch (ex) {
+      console.log(ex);
     }
-
   }
 
   async insert() {
