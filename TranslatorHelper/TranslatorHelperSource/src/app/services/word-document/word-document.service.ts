@@ -22,7 +22,11 @@ export class WordDocumentService {
     await Word.run(async (context) => {
       // Here we insert to replace text
       const paragraph = context.document.getSelection().paragraphs.getFirst();
-      paragraph.insertText(text, 'End');
+      const result = paragraph.insertText(text, 'End');
+      result.font.set({
+        name: 'SimSun'
+      });
+      // paragraph.insertParagraph(text,  Word.InsertLocation.after);
       // range.font.highlightColor = "black";
       // range.font.color = "white";
       await context.sync();

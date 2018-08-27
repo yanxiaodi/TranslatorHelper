@@ -542,16 +542,21 @@ var WordDocumentService = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, Word.run(function (context) { return __awaiter(_this, void 0, void 0, function () {
-                            var paragraph;
+                            var paragraph, result;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
                                     case 0:
                                         paragraph = context.document.getSelection().paragraphs.getFirst();
-                                        paragraph.insertText(text, 'End');
+                                        result = paragraph.insertText(text, 'End');
+                                        result.font.set({
+                                            name: 'SimSun'
+                                        });
+                                        // paragraph.insertParagraph(text,  Word.InsertLocation.after);
                                         // range.font.highlightColor = "black";
                                         // range.font.color = "white";
                                         return [4 /*yield*/, context.sync()];
                                     case 1:
+                                        // paragraph.insertParagraph(text,  Word.InsertLocation.after);
                                         // range.font.highlightColor = "black";
                                         // range.font.color = "white";
                                         _a.sent();
